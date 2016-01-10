@@ -1,0 +1,41 @@
+.dr-wrap {
+    width: 250px;
+}
+.dr-wrap input[type=text] {
+    font-size: 14px;
+}
+.dr-wrap td, .dr-wrap th {
+    text-align: center;
+    width: 30px;
+    height: 30px;
+    border-radius: 4px;
+    white-space: nowrap;
+}
+.dr-wrap td.clickable:hover, .dr-wrap th.clickable:hover {
+    cursor: pointer;
+    background-color: #EEEEEE;
+}
+.dr-wrap td.active:hover {
+    background-color: #1177BD;
+}
+.dr-wrap td.active .text-muted {
+    color: #BBBBBB;
+}
+.dr-wrap td.active {
+    background-color: #357EBD;
+    color: #FFFFFF;
+}
+.dr-wrap td.disabled, .dr-wrap td.disabled .text-muted {
+    color: #CCC;
+    cursor: default;
+}
+.dr-wrap .calendar {
+    position: absolute;
+    background: #FFFFFF;
+    padding: 4px;
+    margin-top: 1px;
+    border: 1px solid rgba(0,0,0,.15);
+    border-radius: 4px;
+    list-style: none;
+    box-shadow: 0 6px 12px rgba(0,0,0,.175)
+}

@@ -1,0 +1,43 @@
+<div class="dr-wrap">
+    <input class="form-control input-sm text-center" type="text"
+           ng-model="current_date_display" ng-focus="is_visible = true" ng-blur="setCurrentDate(current_date)" />
+    <div class="calendar" ng-show="is_visible">
+        <div class="calendar-table">
+            <table class="table-condensed">
+                <thead>
+                    <tr>
+                        <th class="clickable" ng-click="month = month - 1">
+                            <i class="fa fa-chevron-left glyphicon glyphicon-chevron-left"></i>
+                        </th>
+                        <th colspan="6" class="text-center">
+                            {{ month_name }} {{ year }}
+                        </th>
+                        <th class="clickable" ng-click="month = month + 1">
+                            <i class="fa fa-chevron-left glyphicon glyphicon-chevron-right"></i>
+                        </th>
+                    </tr>
+                    <tr>
+                        <th></th>
+                        <th ng-repeat="week_day in day_order">
+                            {{ day_names[week_day] }}
+                        </th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr ng-repeat="week in weeks">
+                        <td>
+                            <b>{{ week.number }}</b>
+                        </td>
+                        <td
+                            ng-repeat="day in week.dates"
+                            ng-click="!checkOutOfRange(day.date) && setCurrentDate(day.date, true, true)"
+                            ng-class="{active: checkCurrentDate(day.date), 'disabled': checkOutOfRange(day.date), 'clickable': !checkOutOfRange(day.date)}">
+
+                            <span ng-class="{'text-muted': !day.in_month}">{{ day.date.get("date") }}</span>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+</div>

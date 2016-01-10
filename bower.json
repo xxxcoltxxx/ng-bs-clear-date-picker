@@ -1,0 +1,21 @@
+{
+  "name": "ng-bs-clear-date-picker",
+  "main": "datepicker.js",
+  "homepage": "https://github.com/xxxcoltxxx/ng-bs-clear-date-picker",
+  "authors": [
+    "Alexander Paramonov <xxxcoltxxx@gmail.com>"
+  ],
+  "description": "Datepicker for angular without jquery",
+  "moduleType": [],
+  "keywords": [
+    "date",
+    "picker",
+    "datepicker",
+    "angular",
+    "bootstrap"
+  ],
+  "license": "MIT",
+  "dependencies": {
+    "moment": "momentjs#~2.11.1"
+  }
+}
