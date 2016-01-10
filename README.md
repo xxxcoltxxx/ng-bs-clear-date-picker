@@ -6,6 +6,11 @@ Datepicker для angular без jQuery
 
 ## Подключение к проекту
 
+### Загрузите директиву
+```
+bower install --save ng-bs-clear-date-picker
+```
+
 ### Подключите в зависимости вашего модуля модуль `ngBsClearDatePicker`:
 ```javascript
 var app = angular.module('app', ['ngBsClearDatePicker']);
